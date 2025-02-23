@@ -1,0 +1,456 @@
+html {
+    scroll-padding-top: 90px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #eee9;
+    font-family: sans-serif;
+    color: #333;
+}
+
+section {
+    margin: 60px;
+}
+
+#check-menu-hamburguesa, .menu-hamburguesa {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border-radius: 0 0 50px 50px;
+    background-color: #4aee;
+    box-shadow: 0 0 10px #bbb;
+}
+
+nav ul {
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.info-personal ul li {
+    display: inline;
+}
+
+nav ul li {
+    margin: 0 25px;
+}
+
+nav ul li a {
+    font-size: 1.3em;
+    color: #fff;
+}
+
+hr {
+    border:  1px solid #bbb3;
+    width: 70%;
+}
+
+.info-personal {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.info-personal ul {
+    margin-top: 8px;
+    display: flex;
+    gap: 15px;
+}
+
+.foto-perfil {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+
+.logo {
+    width: 45px;
+    height: 45px;
+}
+
+.lista-tecnologias {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.logo-github {
+    border-radius: 50%;
+}
+
+#info-personal {
+    margin-top: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 3.5em;
+    font-weight: 500;
+}
+
+h2 {
+    margin: 0;
+    font-size: 2.2em;
+    font-weight: 400;
+    color: #1c98ec;
+}
+
+h3 {
+    font-size: 2em;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 0;
+}
+
+.container-cards {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    box-sizing: border-box;
+    max-width: 1480px;
+}
+
+.card-proyecto {
+    display: flex;
+    flex-direction: column;
+    width: 330px;
+}
+
+.card-proyecto, .card-experiencia-laboral {
+    box-shadow: 0 0 5px #bbb;
+    border-radius: 15px;
+    border-left: 5px solid #4ae;
+    border-right: 5px solid #4ae;
+    background-color: #eee3;
+}
+
+.container-titulo-proyecto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+}
+
+.container-titulo-proyecto p, .container-titulo-proyecto a {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 1.4em;
+    color: #333;
+}
+
+.imagen-proyecto {
+    width: 100%;
+}
+
+.logo-github-card {
+    width: 30px;
+    height: 30px;
+}
+
+.card-detail {
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    height: 50px;
+}
+
+.tags span {
+    margin: 0 1px;
+    padding: 5px;
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+nav ul li:hover {
+    text-shadow: 0 0 25px rgba(238, 238, 238, 0.886);
+    transition: text-shadow 0.5s ease;
+}
+
+.card-experiencia-laboral {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1000px;
+}
+
+.detalle-experiencia-laboral {
+    display: flex;
+    gap: 15px;
+    flex: 1;
+}
+
+.detalle-experiencia-laboral img {
+    width: 80px;
+    height: 80px;
+}
+
+.detalle-experiencia-laboral p {
+    margin: 0;
+}
+
+.informacion-experiencia {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tareas-experiencia-laboral {
+    display: flex;
+    flex: 1;
+}
+
+.tareas-experiencia-laboral ul {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-size: 1.1em;
+    line-height: 1.4;
+
+}
+
+.tareas-experiencia-laboral ul li {
+    list-style-type: disc;
+    padding-left: 0;
+}
+
+.nombre-puesto {
+    font-size: 1.6em;
+}
+
+.nombre-empresa {
+    font-size: 1.3em;
+}
+
+.container-contacto {
+    display: flex;
+    justify-content: center;
+}
+
+.hipervinculo-contacto p {
+    color: #333;
+    font-size: 1.3em;
+}
+
+.hipervinculo-contacto {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.desarrollado, .desarrollado a {
+    padding: 8px 0;
+    margin: 0;
+    color: #fff;
+    font-size: 16px;
+    background-color: #333;
+    text-align: center;
+    border-top: 1px solid #000;
+    text-decoration: none;
+}
+
+@media (max-width: 750px) {
+    nav ul {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 54px;
+    }
+
+    .menu-hamburguesa {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .logo-hamburguesa {
+        width: 40px;
+        height: 40px;
+    }
+
+    #check-menu-hamburguesa:checked ~ ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        gap: 30px;
+        position: absolute;
+        top: 54px;
+        left: 0;
+        background-color: #4aee;
+        width: 100%;
+        border-radius: 0 0 50px 50px;
+        box-shadow: 0 5px 10px #bbb;
+    }
+
+    nav:has(#check-menu-hamburguesa:checked) {
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    #info-personal {
+        gap: 20px;
+    }
+
+    .foto-perfil {
+        width: 170px;
+        height: 170px;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    .detalle-experiencia-laboral img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .nombre-puesto {
+        font-size: 1.4em;
+    }
+
+    .nombre-empresa {
+        font-size: 1.2em;
+    }
+
+    .tareas-experiencia-laboral ul li {
+        list-style: none;
+        font-size: 0.9em;
+    }
+}
+
+
+@media (max-width: 670px) {
+    .detalle-experiencia-laboral {
+        justify-content: center;
+    }
+
+    .card-experiencia-laboral {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .tareas-experiencia-laboral ul {
+        gap: 20px;
+    }
+}
+
+
+@media (max-width: 550px) {
+    .foto-perfil {
+        display: none;
+    }
+
+    #info-personal {
+        gap: 0;
+    }
+
+    .info-personal {
+        align-items: center;
+    }
+
+    h1, h2 {
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 470px) {
+    .lista-tecnologias {
+        gap: 30px;
+    }
+
+    .tags span {
+        display: none;
+    }
+
+    .container-titulo-proyecto p, .container-titulo-proyecto a {
+        font-size: 1.2em;
+    }
+
+    .card-detail {
+        justify-content: center;
+    }
+}
+
+
+@media (max-width: 400px) {
+    section {
+        margin: 60px 30px;
+    }
+
+    .detalle-experiencia-laboral {
+        padding-bottom: 25px;
+        border-bottom: 1px solid #4aee;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    .detalle-experiencia-laboral img {
+        display: none;
+    }
+
+    .card-experiencia-laboral {
+        gap: 25px;
+    }
+
+    .container-contacto ul li {
+        font-size: 0.9em;
+    }
+}
+
+
+@media (max-width: 350px) {
+    .container-contacto ul {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .container-contacto ul li {
+        font-size: 0.8em;
+    }
+
+    .container-contacto ul li a{
+        flex-direction: column;
+        gap: 5px;
+    }
+}

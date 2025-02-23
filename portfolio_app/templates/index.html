@@ -1,0 +1,156 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Portfolio web de Lautaro Reche">
+    <meta name="keywords" content="portfolio, desarrollador web, diseño web, programación, desarrollo front-end, HTML, CSS, proyectos web, diseño UI/UX, aplicaciones web, desarrollo de software, programador freelance, soluciones tecnológicas, experiencia en desarrollo web, portafolio de desarrollador, proyectos de programación, portafolio profesional">
+    <meta name="author" content="Lautaro Reche">
+    <meta name="robots" content="index, follow">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <title>Portfolio - Lautaro Reche</title>
+    <link rel="icon" href="{% static 'images/favicon.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <input type="checkbox" id="check-menu-hamburguesa">
+            <label for="check-menu-hamburguesa" class="menu-hamburguesa">
+                <img src="{% static 'images/logo-menu.png' %}" alt="Logo del menú" class="logo-hamburguesa"></i>
+            </label>
+            <ul>
+                <li><a href="#info-personal" onclick="toggleCheckbox()">Inicio</a></li>
+                <li><a href="#proyectos" onclick="toggleCheckbox()">Proyectos</a></li>
+                <li><a href="#tecnologias" onclick="toggleCheckbox()">Tecnologías</a></li>
+                <li><a href="#experiencia" onclick="toggleCheckbox()">Experiencia</a></li>
+                <li><a href="#contacto" onclick="toggleCheckbox()">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="info-personal">
+        <div>
+            <img src="{% static 'images/foto.png' %}" alt="Foto de perfil" class="foto-perfil">
+        </div>
+        <div class="info-personal">
+            <h1>Lautaro Reche</h1>
+            <h2>Desarrollador de software</h2>
+            <ul>
+                <li>
+                    <a href="https://www.linkedin.com/in/lautaroreche/" target="_blank" rel="noreferrer">
+                        <img src="{% static 'images/logo-linkedin.png' %}" alt="Logo LinkedIn" class="logo">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/lautaroreche" target="_blank" rel="noreferrer">
+                        <img src="{% static 'images/logo-github.png' %}" alt="Logo GitHub" class="logo logo-github">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <hr>
+    <section id="proyectos"> 
+        <h3>Proyectos</h3>
+        <div class="container-cards">
+            {% for project in projects %}
+                <div class="card-proyecto">
+                    <div class="container-titulo-proyecto">
+                        <p>{{ project.title }}</p>
+                    </div>
+                    <img src="{{ project.image.url }}" alt="Foto del proyecto {{ project.title }}" class="imagen-proyecto">
+                    <div class="card-detail">
+                        <a href="{{ project.repo_url }}" target="_blank" rel="noreferrer">
+                            <img src="{% static 'images/logo-github.png' %}" class="logo-github-card" alt="Logo de GitHub">
+                        </a>
+                        <div class="tags">
+                            {% for key, value in project_tags_dict %}
+                                {% if key == project.id %}
+                                    {% for tag in value %}
+                                        <span>{{ tag }}</span>
+                                    {% endfor %}
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+    <hr>
+    <section id="tecnologias">
+        <h3>Tecnologías</h3>
+            <div class="lista-tecnologias">
+                {% for technology in technologies %}
+                    <img src="{{ technology.image.url }}" alt="Logo {{ technology.name }}" class="logo">
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <hr>
+    <section id="experiencia">
+        <h3>Experiencia</h3>
+        <div class="container-cards">
+            {% for work_experience in work_experiences %}
+                <div class="card-experiencia-laboral">
+                    <div class="detalle-experiencia-laboral">
+                        <img src="{{ work_experience.image.url }}" alt="Logo {{ work_experience.name }}">
+                        <div class="informacion-experiencia">
+                            <p class="nombre-puesto">{{ work_experience.title }}</p>
+                            <p class="nombre-empresa">{{ work_experience.company }}</p>
+                            <p>{{ work_experience.location }}</p>
+                            <p>{{ work_experience.start_date }} - {{ work_experience.end_date }}</p>
+                        </div>
+                    </div>
+                    <div class="tareas-experiencia-laboral">
+                        <ul>
+                            {% for key, value in work_experience_description_dict %}
+                                {% if key == work_experience.id %}
+                                    {% for description in value %}
+                                        {% if description %}
+                                            <li>{{ description }}</li>
+                                        {% endif %}
+                                    {% endfor %}
+                                {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+    <hr>
+    <section id="contacto">
+        <h3>Contacto</h3>
+        <div class="container-contacto">
+            <ul>
+                <li>
+                    <a href="mailto:lautaroreche1@gmail.com" target="_blank" rel="noreferrer" class="hipervinculo-contacto">
+                        <img src="{% static 'images/logo-gmail.png' %}" alt="Logo Gmail" class="logo">
+                        <p>lautaroreche1@gmail.com</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/lautaroreche/" target="_blank" rel="noreferrer" class="hipervinculo-contacto">
+                        <img src="{% static 'images/logo-linkedin.png' %}" alt="Logo LinkedIn" class="logo">
+                        <p>lautaroreche</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <footer>
+        <p class="desarrollado">Desarrollado por <a href="https://www.linkedin.com/in/lautaroreche/" target="_blank" rel="noreferrer">Lautaro Reche</a></p>
+    </footer>
+</body>
+</html>
+
+<script>
+    function toggleCheckbox() {
+        document.getElementById('check-menu-hamburguesa').checked = false;
+    }
+</script>
