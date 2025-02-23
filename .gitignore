@@ -25,10 +25,6 @@ logfile
 .env
 config/settings.pyc
 
-# Archivos de migraciones innecesarios (opcionales)
-**/migrations/*.py
-!**/migrations/__init__.py
-
 # Archivos de compilación y estáticos
 staticfiles/
 media/
