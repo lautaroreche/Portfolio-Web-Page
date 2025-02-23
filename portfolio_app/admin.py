@@ -1,5 +1,6 @@
 from django.contrib import admin
 from .models import Project, Technology, WorkExperience
+from django.contrib.sessions.models import Session
 
 
 class ProjectAdmin(admin.ModelAdmin):
@@ -17,6 +18,7 @@ class WorkExperienceAdmin(admin.ModelAdmin):
     search_fields = ('id', 'title', 'company', 'location', 'start_date', 'end_date', 'image', 'description')
 
 
+admin.site.register(Session)
 admin.site.register(Project, ProjectAdmin)
 admin.site.register(Technology, TechnologyAdmin)
 admin.site.register(WorkExperience, WorkExperienceAdmin)
