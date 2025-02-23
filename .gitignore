@@ -26,8 +26,6 @@ logfile
 config/settings.pyc
 
 # Archivos de compilación y estáticos
-staticfiles/
-media/
 node_modules/
 
 # Archivos de dependencias
