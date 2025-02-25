@@ -7,6 +7,7 @@ class Project(models.Model):
     title = models.CharField(max_length=100)
     tags = models.CharField(max_length=250)
     image = CloudinaryField('image', resource_type='image')
+    public_url = models.URLField(blank=True)
     repo_url = models.URLField(blank=True)
     
     def __str__(self):

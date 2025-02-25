@@ -60,9 +60,19 @@
             {% for project in projects %}
                 <div class="card-proyecto">
                     <div class="container-titulo-proyecto">
-                        <p>{{ project.title }}</p>
+                        {% if  project.public_url %}
+                            <a href="{{ project.public_url }}" alt="{{ project.title }}" target="_blank" rel="noreferrer">{{ project.title }}</a>
+                        {% else %}
+                            <p>{{ project.title }}</p>
+                        {% endif %}
                     </div>
-                    <img src="{{ project.image.url }}" alt="Foto del proyecto {{ project.title }}" class="imagen-proyecto">
+                    {% if  project.public_url %}
+                            <a href="{{ project.public_url }}" alt="{{ project.title }}" target="_blank" rel="noreferrer">
+                                <img src="{{ project.image.url }}" alt="Foto del proyecto {{ project.title }}" class="imagen-proyecto">
+                            </a>
+                        {% else %}
+                            <img src="{{ project.image.url }}" alt="Foto del proyecto {{ project.title }}" class="imagen-proyecto">
+                        {% endif %}
                     <div class="card-detail">
                         <a href="{{ project.repo_url }}" target="_blank" rel="noreferrer">
                             <img src="{% static 'images/logo-github.png' %}" class="logo-github-card" alt="Logo de GitHub">
@@ -84,11 +94,11 @@
     <hr>
     <section id="tecnologias">
         <h3>Tecnologías</h3>
-            <div class="lista-tecnologias">
-                {% for technology in technologies %}
-                    <img src="{{ technology.image.url }}" alt="{{ technology.name }}" class="logo">
-                {% endfor %}
-            </div>
+        <div class="lista-tecnologias">
+            {% for technology in technologies %}
+                <img src="{{ technology.image.url }}" alt="{{ technology.name }}" class="logo">
+            {% endfor %}
+        </div>
         </div>
     </section>
     <hr>

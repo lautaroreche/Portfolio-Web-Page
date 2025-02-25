@@ -152,13 +152,13 @@ h3 {
     justify-content: center;
     align-items: center;
     height: 90px;
+    font-size: 12px;
 }
 
 .container-titulo-proyecto p, .container-titulo-proyecto a {
     margin: 0;
     padding: 0;
     text-align: center;
-    font-size: 1.4em;
     color: #333;
 }
 
