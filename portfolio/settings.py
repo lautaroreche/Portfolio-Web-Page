@@ -14,6 +14,9 @@ from pathlib import Path
 import environ
 import os
 import dj_database_url
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -43,8 +46,28 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'cloudinary_storage',
+    'cloudinary',
     'portfolio_app',
 ]
+
+
+# Configuración de Cloudinary
+cloudinary.config(
+   cloud_name = env("CLOUD_NAME"),
+   api_key = env("API_KEY"),
+   api_secret = env("API_SECRET")
+)
+
+# Configuración de Cloudinary
+CLOUDINARY_STORAGE = {
+   'CLOUD_NAME': os.getenv('CLOUD_NAME'),
+   'API_KEY': os.getenv('API_KEY'),
+   'API_SECRET': os.getenv('API_SECRET')
+}
+# Almacenamiento de archivos multimedia
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
 
 if env("DEBUG", default=False):
     MIDDLEWARE = [
