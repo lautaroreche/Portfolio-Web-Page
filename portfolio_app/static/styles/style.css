@@ -91,6 +91,10 @@ hr {
     gap: 50px;
 }
 
+.lista-tecnologias p {
+    text-align: center;
+}
+
 .logo-github {
     border-radius: 50%;
 }
