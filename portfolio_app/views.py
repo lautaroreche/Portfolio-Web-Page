@@ -3,7 +3,7 @@ from .models import Project, Technology, WorkExperience
 
 
 def home(request):
-    projects = Project.objects.all()
+    projects = Project.objects.all().reverse()
     technologies = Technology.objects.all()
     work_experiences = WorkExperience.objects.all()
 
