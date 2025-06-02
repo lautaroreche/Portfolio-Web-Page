@@ -96,7 +96,10 @@
         <h3>Tecnologías</h3>
         <div class="lista-tecnologias">
             {% for technology in technologies %}
-                <img src="{{ technology.image.url }}" alt="{{ technology.name }}" class="logo logo-tecnologia">
+                <div class="detalle-tecnologia">
+                    <img src="{{ technology.image.url }}" alt="{{ technology.name }}" class="logo logo-tecnologia">
+                    <p>{{ technology.name }}</p>
+                </div>
             {% endfor %}
         </div>
         </div>
