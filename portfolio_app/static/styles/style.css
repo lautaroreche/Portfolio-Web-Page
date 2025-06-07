@@ -64,13 +64,19 @@ hr {
 .info-personal {
     display: flex;
     flex-direction: column;
-    gap: 9px;
+    gap: 5px;
 }
 
 .info-personal ul {
     margin-top: 8px;
     display: flex;
     gap: 15px;
+}
+
+.info-personal p {
+    margin: 5px 0;
+    font-size: 1.1em;
+    max-width: 500px;
 }
 
 .foto-perfil {
