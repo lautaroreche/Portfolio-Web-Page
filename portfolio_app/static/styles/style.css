@@ -14,7 +14,7 @@ section {
     margin: 60px;
 }
 
-#check-menu-hamburguesa, .menu-hamburguesa {
+#check-hamburger-menu, .hamburger-menu {
     display: none;
 }
 
@@ -43,7 +43,7 @@ ul {
     list-style-type: none;
 }
 
-.info-personal ul li {
+.personal-info ul li {
     display: inline;
 }
 
@@ -61,25 +61,25 @@ hr {
     width: 70%;
 }
 
-.info-personal {
+.personal-info {
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
 
-.info-personal ul {
+.personal-info ul {
     margin-top: 8px;
     display: flex;
     gap: 15px;
 }
 
-.info-personal p {
+.personal-info p {
     margin: 5px 0;
     font-size: 1.1em;
     max-width: 500px;
 }
 
-.foto-perfil {
+.profile-picture {
     width: 250px;
     height: 250px;
     border-radius: 50%;
@@ -90,34 +90,34 @@ hr {
     height: 45px;
 }
 
-.logo-tecnologia:hover {
+.technology-logo:hover {
     transform: scale(1.1);
     transition: transform 0.5s ease;
 }
 
-.lista-tecnologias {
+.technologies-list {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 50px;
 }
 
-.detalle-tecnologia {
+.technology-detail {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.detalle-tecnologia p {
+.technology-detail p {
     margin-top: 5px;
     font-size: 14px;
 }
 
-.logo-github {
+.github-logo {
     border-radius: 50%;
 }
 
-#info-personal {
+#personal-info {
     margin-top: 110px;
     display: flex;
     justify-content: center;
@@ -145,7 +145,7 @@ h3 {
     margin-top: 0;
 }
 
-.container-cards {
+.cards-container {
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -155,13 +155,13 @@ h3 {
     max-width: 1480px;
 }
 
-.card-proyecto {
+.project-card {
     display: flex;
     flex-direction: column;
     width: 330px;
 }
 
-.card-proyecto, .card-experiencia-laboral {
+.project-card, .work-experience-card {
     box-shadow: 0 0 5px #bbb;
     border-radius: 15px;
     border-left: 5px solid #4ae;
@@ -169,7 +169,7 @@ h3 {
     background-color: #eee3;
 }
 
-.container-titulo-proyecto {
+.project-title-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -177,18 +177,18 @@ h3 {
     font-size: 22px;
 }
 
-.container-titulo-proyecto p, .container-titulo-proyecto a {
+.project-title-container p, .project-title-container a {
     margin: 0;
     padding: 0;
     text-align: center;
     color: #333;
 }
 
-.imagen-proyecto {
+.project-image {
     width: 100%;
 }
 
-.logo-github-card {
+.github-logo-card {
     width: 30px;
     height: 30px;
 }
@@ -216,7 +216,7 @@ nav ul li:hover {
     transition: text-shadow 0.5s ease;
 }
 
-.card-experiencia-laboral {
+.work-experience-card {
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -224,33 +224,33 @@ nav ul li:hover {
     max-width: 1000px;
 }
 
-.detalle-experiencia-laboral {
+.work-experience-detail {
     display: flex;
     gap: 15px;
     flex: 1;
 }
 
-.detalle-experiencia-laboral img {
+.work-experience-detail img {
     width: 80px;
     height: 80px;
 }
 
-.detalle-experiencia-laboral p {
+.work-experience-detail p {
     margin: 0;
 }
 
-.informacion-experiencia {
+.experience-info {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.tareas-experiencia-laboral {
+.work-experience-tasks {
     display: flex;
     flex: 1;
 }
 
-.tareas-experiencia-laboral ul {
+.work-experience-tasks ul {
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -259,30 +259,30 @@ nav ul li:hover {
 
 }
 
-.tareas-experiencia-laboral ul li {
+.work-experience-tasks ul li {
     list-style-type: disc;
     padding-left: 0;
 }
 
-.nombre-puesto {
+.position-name {
     font-size: 1.6em;
 }
 
-.nombre-empresa {
+.company-name {
     font-size: 1.3em;
 }
 
-.container-contacto {
+.contact-container {
     display: flex;
     justify-content: center;
 }
 
-.hipervinculo-contacto p {
+.contact-hyperlink p {
     color: #333;
     font-size: 1.3em;
 }
 
-.hipervinculo-contacto {
+.contact-hyperlink {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -311,19 +311,19 @@ nav ul li:hover {
         height: 54px;
     }
 
-    .menu-hamburguesa {
+    .hamburger-menu {
         display: flex;
         justify-content: center;
         align-items: center;
         cursor: pointer;
     }
 
-    .logo-hamburguesa {
+    .hamburger-logo {
         width: 40px;
         height: 40px;
     }
 
-    #check-menu-hamburguesa:checked ~ ul {
+    #check-hamburger-menu:checked ~ ul {
         display: flex;
         flex-direction: column;
         justify-content: start;
@@ -338,16 +338,16 @@ nav ul li:hover {
         box-shadow: 0 5px 10px #bbb;
     }
 
-    nav:has(#check-menu-hamburguesa:checked) {
+    nav:has(#check-hamburger-menu:checked) {
         border-radius: 0;
         box-shadow: none;
     }
 
-    #info-personal {
+    #personal-info {
         gap: 20px;
     }
 
-    .foto-perfil {
+    .profile-picture {
         width: 170px;
         height: 170px;
     }
@@ -360,20 +360,20 @@ nav ul li:hover {
         font-size: 2em;
     }
 
-    .detalle-experiencia-laboral img {
+    .work-experience-detail img {
         width: 60px;
         height: 60px;
     }
 
-    .nombre-puesto {
+    .position-name {
         font-size: 1.4em;
     }
 
-    .nombre-empresa {
+    .company-name {
         font-size: 1.2em;
     }
 
-    .tareas-experiencia-laboral ul li {
+    .work-experience-tasks ul li {
         list-style: none;
         font-size: 0.9em;
     }
@@ -381,31 +381,31 @@ nav ul li:hover {
 
 
 @media (max-width: 670px) {
-    .detalle-experiencia-laboral {
+    .work-experience-detail {
         justify-content: center;
     }
 
-    .card-experiencia-laboral {
+    .work-experience-card {
         flex-direction: column;
         gap: 40px;
     }
 
-    .tareas-experiencia-laboral ul {
+    .work-experience-tasks ul {
         gap: 20px;
     }
 }
 
 
 @media (max-width: 550px) {
-    .foto-perfil {
+    .profile-picture {
         display: none;
     }
 
-    #info-personal {
+    #personal-info {
         gap: 0;
     }
 
-    .info-personal {
+    .personal-info {
         align-items: center;
     }
 
@@ -416,7 +416,7 @@ nav ul li:hover {
 
 
 @media (max-width: 470px) {
-    .lista-tecnologias {
+    .technologies-list {
         gap: 30px;
     }
 
@@ -424,7 +424,7 @@ nav ul li:hover {
         display: none;
     }
 
-    .container-titulo-proyecto p, .container-titulo-proyecto a {
+    .project-title-container p, .project-title-container a {
         font-size: 1.2em;
     }
 
@@ -439,39 +439,39 @@ nav ul li:hover {
         margin: 60px 30px;
     }
 
-    .detalle-experiencia-laboral {
+    .work-experience-detail {
         padding-bottom: 25px;
         border-bottom: 1px solid #4aee;
         border-radius: 5px;
         text-align: center;
     }
 
-    .detalle-experiencia-laboral img {
+    .work-experience-detail img {
         display: none;
     }
 
-    .card-experiencia-laboral {
+    .work-experience-card {
         gap: 25px;
     }
 
-    .container-contacto ul li {
+    .contact-container ul li {
         font-size: 0.9em;
     }
 }
 
 
 @media (max-width: 350px) {
-    .container-contacto ul {
+    .contact-container ul {
         display: flex;
         flex-direction: column;
         gap: 20px;
     }
 
-    .container-contacto ul li {
+    .contact-container ul li {
         font-size: 0.8em;
     }
 
-    .container-contacto ul li a{
+    .contact-container ul li a{
         flex-direction: column;
         gap: 5px;
     }
